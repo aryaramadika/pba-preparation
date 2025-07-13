@@ -4,6 +4,7 @@
     "": {
       "name": "papi-intro",
       "dependencies": {
+        "@polkadot-api/descriptors": "file:.papi/descriptors",
         "polkadot-api": "^1.14.1",
       },
       "devDependencies": {
@@ -90,6 +91,8 @@
     "@polkadot-api/cli": ["@polkadot-api/cli@0.14.1", "", { "dependencies": { "@commander-js/extra-typings": "^14.0.0", "@polkadot-api/codegen": "0.16.4", "@polkadot-api/ink-contracts": "0.3.5", "@polkadot-api/json-rpc-provider": "0.0.4", "@polkadot-api/known-chains": "0.9.0", "@polkadot-api/metadata-compatibility": "0.3.0", "@polkadot-api/observable-client": "0.13.0", "@polkadot-api/polkadot-sdk-compat": "2.3.2", "@polkadot-api/sm-provider": "0.1.7", "@polkadot-api/smoldot": "0.3.10", "@polkadot-api/substrate-bindings": "0.14.0", "@polkadot-api/substrate-client": "0.4.1", "@polkadot-api/utils": "0.2.0", "@polkadot-api/wasm-executor": "^0.2.1", "@polkadot-api/ws-provider": "0.4.0", "@types/node": "^22.15.30", "commander": "^14.0.0", "execa": "^9.6.0", "fs.promises.exists": "^1.1.4", "ora": "^8.2.0", "read-pkg": "^9.0.1", "rxjs": "^7.8.2", "tsc-prog": "^2.3.0", "tsup": "^8.5.0", "typescript": "^5.8.3", "write-package": "^7.1.0" }, "bin": { "papi": "dist/main.js", "polkadot-api": "dist/main.js" } }, "sha512-9vHPc5urmSarADToGnpTeieAMKMV12OJ4vNp+5sHb7jdkCL2lwpL0dF0L5X1kixYht84NPOa9ZbTGGyPR1gxxg=="],
 
     "@polkadot-api/codegen": ["@polkadot-api/codegen@0.16.4", "", { "dependencies": { "@polkadot-api/ink-contracts": "0.3.5", "@polkadot-api/metadata-builders": "0.12.2", "@polkadot-api/metadata-compatibility": "0.3.0", "@polkadot-api/substrate-bindings": "0.14.0", "@polkadot-api/utils": "0.2.0" } }, "sha512-lHNTJ3rG0tBRoKzjAhQRs7qYRdrBtvpKIWDo7fgun2A1DEsWxZAvugDs+Qp1m4UcXP5YgjI8bv//a9Qu8SD1XA=="],
+
+    "@polkadot-api/descriptors": ["@polkadot-api/descriptors@file:.papi/descriptors", { "peerDependencies": { "polkadot-api": ">=1.11.2" } }],
 
     "@polkadot-api/ink-contracts": ["@polkadot-api/ink-contracts@0.3.5", "", { "dependencies": { "@polkadot-api/metadata-builders": "0.12.2", "@polkadot-api/substrate-bindings": "0.14.0", "@polkadot-api/utils": "0.2.0" } }, "sha512-91TO9TV0prCz+nDHVaxt/iXldxVY1xZykyook0Tqt+L2NpjM0Rgj7fQe9hysZfw5GUYlf5K2HI7BxRWEQGaorA=="],
 
