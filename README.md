@@ -4,9 +4,6 @@ This repository documents my personal learning journey and preparation for **Pol
 
 ---
 
-
----
-
 ## 🧠 Study Focus Areas
 
 
