@@ -3,6 +3,7 @@ mod system;
 
 use std::collections::BTreeMap;
 
+#[derive(Debug)]
 pub struct Runtime {
 	balances: balances::Pallet,
 	system: system::Pallet,
