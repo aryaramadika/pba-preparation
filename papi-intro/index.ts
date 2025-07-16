@@ -9,10 +9,19 @@ function makeClient(endpoint: string): PolkadotClient {
   return client;
 }
 
+async function printChainInfo(client: PolkadotClient) {
+  let chain = await client.getChainSpecData();
+  let finalizedBlock = await client.getFinalizedBlock();
+  console.log(
+    `Connected to ${chain.name} at block ${finalizedBlock.number}.\n`
+  );
+}
+
 async function main() {
   const polkadotClient = makeClient(RPC_ENDPOINT);
   console.log("Client created successfully.");
   console.log("Client details:", { polkadotClient });
+  printChainInfo(polkadotClient);
 }
 
 main().catch((error) => {
