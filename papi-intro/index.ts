@@ -9,4 +9,12 @@ function makeClient(endpoint: string): PolkadotClient {
   return client;
 }
 
-makeClient(RPC_ENDPOINT);
+async function main() {
+  const polkadotClient = makeClient(RPC_ENDPOINT);
+  console.log("Client created successfully.");
+  console.log("Client details:", { polkadotClient });
+}
+
+main().catch((error) => {
+  console.error("Error in main function:", error);
+});
