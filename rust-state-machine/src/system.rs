@@ -28,3 +28,21 @@ impl Pallet {
 		self.nonce.insert(who.clone(), current_nonce + 1);
 	}
 }
+
+#[test]
+fn init_system() {
+	let mut system = Pallet { block_number: 0, nonce: BTreeMap::new() };
+	assert_eq!(system.block_number(), 0);
+	system.increment_block_number();
+	assert_eq!(system.block_number(), 1);
+	let alice = "alice".to_string();
+	assert_eq!(system.nonce(&alice), 0);
+	system.increment_nonce(&alice);
+
+	let bob = "bob".to_string();
+	assert_eq!(system.nonce(&bob), 0);
+	system.increment_nonce(&bob);
+
+	assert_eq!(system.nonce(&alice), 1);
+	assert_eq!(system.nonce(&bob), 1);
+}
