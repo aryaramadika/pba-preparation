@@ -59,4 +59,5 @@ fn init_balances() {
 	balances.set_balance(&"alice".to_string(), 100);
 	assert_eq!(balances.balance(&"alice".to_string()), 100);
 	assert_eq!(balances.balance(&"bob".to_string()), 0);
+	balances.transfer("alice".to_string(), "bob".to_string(), 50).unwrap();
 }
