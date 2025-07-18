@@ -16,6 +16,12 @@ impl Pallet {
 	pub fn set_balance(&mut self, who: &String, amount: u128) {
 		/* Insert `amount` into the BTreeMap under `who`. */
 		self.balances.insert(who.clone(), amount);
+		print!("Setting balance for {} to {}\n", who, amount);
+		if amount == 0 {
+			self.balances.remove(who);
+			print!("Removed {} from balances as the amount is zero\n", who);
+		}
+		println!("Balance set for {}: {}", who, amount);
 	}
 
 	/// Get the balance of an account `who`.
